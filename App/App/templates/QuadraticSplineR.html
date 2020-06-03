@@ -91,10 +91,15 @@
   </nav>
 </header>
 
-    <form action="" method="POST">
-      {% csrf_token %}
-    </br></br>
-    <p style="margin-left:1.5em">Quadratic Spline Method</p>
+  <form action="{% url 'QuadraticSpline' %}" method="POST">
+    {% csrf_token %}
+  </br>
+  <label style="margin-left:1.5em">Quadratic Spline Method </label><br>
+  <label style="margin-left:1.5em"> Enter vector X: </label>
+  <input style="margin-left:1.5em" type="text" name="vectorX"><br>
+  <label style="margin-left:1.5em"> Enter vector Y: </label>
+  <input style="margin-left:1.5em" type="text" name="vectorY"><br>
+  <button  style="margin-left:1.5em" type="submit">Submit</button>
     <p style="margin-left:1.5em">Polynomial:</p>
     <p style="margin-left:1.5em">{% for i in Resultado %}
     {{ i }}</br>

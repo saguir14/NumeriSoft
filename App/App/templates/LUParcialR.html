@@ -91,10 +91,15 @@
   </nav>
 </header>
 
-    <form action="" method="POST">
-      {% csrf_token %}
-    </br></br>
-      <p style="margin-left:1.5em">LU Partial Method</p>
+  <form action="{% url 'LUParcial' %}" method="POST">
+    {% csrf_token %}
+  </br>
+    <label style="margin-left:1.5em">LU Partial Method </label><br>
+    <label style="margin-left:1.5em"> Enter matrix A: </label>
+    <input style="margin-left:1.5em" type="text" name="matriz"><br>
+    <label style="margin-left:1.5em"> Enter vector b: </label>
+    <input style="margin-left:1.5em" type="text" name="vector"><br>
+  <button  style="margin-left:1.5em" type="submit">Submit</button>
       <p style="margin-left:1.5em">Resultados:</p>
 
       <p style="margin-left:1.5em">Matrix P:</p>

@@ -91,10 +91,21 @@
   </nav>
 </header>
 
-    <form action="" method="POST">
-      {% csrf_token %}
-    </br></br>
-    <p style="margin-left:1.5em">Jacobi Method</p>
+  <form action="{% url 'GaussSeidel' %}" method="POST">
+    {% csrf_token %}
+  </br>
+  <label style="margin-left:1.5em">GaussSeidel Method </label><br>
+  <label style="margin-left:1.5em"> Enter matrix A: </label>
+  <input style="margin-left:1.5em" type="text" name="matriz"><br>
+  <label style="margin-left:1.5em"> Enter vector b: </label>
+  <input style="margin-left:1.5em" type="text" name="vectorB"><br>
+  <label style="margin-left:1.5em"> Enter vector Guess: </label>
+  <input style="margin-left:1.5em" type="text" name="vectorGuess"><br>
+  <label style="margin-left:1.5em"> Iterations: </label>
+  <input style="margin-left:1.5em" type="text" name="iteraciones"><br>
+  <label style="margin-left:1.5em"> Tolerance: </label>
+  <input style="margin-left:1.5em" type="text" name="tolerancia"><br>
+  <button  style="margin-left:1.5em" type="submit">Submit</button>
     <p style="margin-left:1.5em">Resultados:</p>
 
     <p style="margin-left:1.5em">Vector X:</p>
