@@ -35,78 +35,72 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="#">NumeriSoft</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
-              Equation's Solution
-              </a>
-              <div class="dropdown-menu" aria-labelledby="dropdown02">
-                  <a class="dropdown-item" href="{% url 'IncrementalSearch' %}">Incremental Search</a>
-                  <a class="dropdown-item" href="{% url 'Biseccion' %}">Bisection</a>
-                  <a class="dropdown-item" href="{% url 'FalsePosition' %}">False Position</a>
-                  <a class="dropdown-item" href="{% url 'FixedPoint' %}">Fixed Point</a>
-                  <a class="dropdown-item" href="{% url 'newton' %}">Newton</a>
-                  <a class="dropdown-item" href="{% url 'secant' %}">Secant</a>
-                  <a class="dropdown-item" href="{% url 'MultipleRoots' %}">Multiple Roots</a>
-              </div>
-          </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Splines</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown01">
-                <a class="dropdown-item" href="{% url 'CubicSplineRender' %}">Quadratic Spline</a>
-                <a class="dropdown-item" href="{% url 'QuadraticSplineRender' %}">Cubic Spline</a>
-                <a class="dropdown-item" href="{% url 'LinearSplineRender' %}">Linear Spline</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Linear methods</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown01">
-                <a class="dropdown-item" href="{% url 'CroutRender' %}">Crout</a>
-                <a class="dropdown-item" href="{% url 'CholeskyRender' %}">Cholesky</a>
-                <a class="dropdown-item" href="{% url 'DoolittleRender' %}">Doolittle</a>
-                <a class="dropdown-item" href="{% url 'LUParcialRender' %}">LUParcial</a>
-                <a class="dropdown-item" href="{% url 'PartialPivotingRender' %}">PartialPivoting</a>
-                <a class="dropdown-item" href="{% url 'JacobiRender' %}">Jacobi</a>
-                <a class="dropdown-item" href="{% url 'SorRender' %}">Sor</a>
-                <a class="dropdown-item" href="{% url 'GaussSeidelRender' %}">GaussSeidel</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Interpolation Methods</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown03">
-                  <a class="dropdown-item" href="{% url 'newtoninterp' %}">Newton</a>
-                  <a class="dropdown-item" href="{% url 'vandermonde' %}">Vandermonde</a>
-                  <a class="dropdown-item" href="{% url 'lagrange' %}">Lagrange</a>
-                  <a class="dropdown-item" href="{% url 'LUParcialRender' %}">Linear Spline</a>
-                  <a class="dropdown-item" href="{% url 'LUParcialRender' %}">Quadratic Spline</a>
-                  <a class="dropdown-item" href="{% url 'LUParcialRender' %}">Cubic Spline</a>
-              </div>
-          </li>
-          </ul>
-          <form class="form-inline mt-2 mt-md-0">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Don't Use</button>
-          </form>
-        </div>
-      </nav>
-    </header>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#">NumeriSoft</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+          Equation's Solution
+          </a>
+          <div class="dropdown-menu" aria-labelledby="dropdown02">
+              <a class="dropdown-item" href="{% url 'IncrementalSearch' %}">Incremental Search</a>
+              <a class="dropdown-item" href="{% url 'Biseccion' %}">Bisection</a>
+              <a class="dropdown-item" href="{% url 'FalsePosition' %}">False Position</a>
+              <a class="dropdown-item" href="{% url 'FixedPoint' %}">Fixed Point</a>
+              <a class="dropdown-item" href="{% url 'newton' %}">Newton</a>
+              <a class="dropdown-item" href="{% url 'secant' %}">Secant</a>
+              <a class="dropdown-item" href="{% url 'MultipleRoots' %}">Multiple Roots</a>
+          </div>
+      </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Linear methods</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown01">
+            <a class="dropdown-item" href="{% url 'CroutRender' %}">Crout</a>
+            <a class="dropdown-item" href="{% url 'CholeskyRender' %}">Cholesky</a>
+            <a class="dropdown-item" href="{% url 'DoolittleRender' %}">Doolittle</a>
+            <a class="dropdown-item" href="{% url 'LUParcialRender' %}">LUParcial</a>
+            <a class="dropdown-item" href="{% url 'PartialPivotingRender' %}">PartialPivoting</a>
+            <a class="dropdown-item" href="{% url 'JacobiRender' %}">Jacobi</a>
+            <a class="dropdown-item" href="{% url 'SorRender' %}">Sor</a>
+            <a class="dropdown-item" href="{% url 'GaussSeidelRender' %}">GaussSeidel</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Interpolation Methods</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown03">
+              <a class="dropdown-item" href="{% url 'newtoninterp' %}">Newton</a>
+              <a class="dropdown-item" href="{% url 'vandermonde' %}">Vandermonde</a>
+              <a class="dropdown-item" href="{% url 'lagrange' %}">Lagrange</a>
+              <a class="dropdown-item" href="{% url 'CubicSplineRender' %}">Quadratic Spline</a>
+              <a class="dropdown-item" href="{% url 'QuadraticSplineRender' %}">Cubic Spline</a>
+              <a class="dropdown-item" href="{% url 'LinearSplineRender' %}">Linear Spline</a>
+          </div>
+      </li>
+      </ul>
+    </div>
+  </nav>
+</header>
 
-    <form action="" method="POST">
+    <form action="{% url 'Crout' %}" method="POST">
       {% csrf_token %}
     </br></br>
     <p style="margin-left:1.5em">Crout Method</p>
+    <label style="margin-left:1.5em">Crout Method </label><br>
+    <label style="margin-left:1.5em"> Enter matrix A: </label>
+    <input style="margin-left:1.5em" type="text" name="matriz"><br>
+    <label style="margin-left:1.5em"> Enter vector b: </label>
+    <input style="margin-left:1.5em" type="text" name="vector"><br>
+    <button  style="margin-left:1.5em" type="submit">Submit</button>
     <p style="margin-left:1.5em">Resultados:</p>
 
     <p style="margin-left:1.5em">Matrix U:</p>

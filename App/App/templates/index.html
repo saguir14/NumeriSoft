@@ -60,15 +60,6 @@
       </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Splines</a>
-          <div class="dropdown-menu" aria-labelledby="dropdown01">
-            <a class="dropdown-item" href="{% url 'CubicSplineRender' %}">Quadratic Spline</a>
-            <a class="dropdown-item" href="{% url 'QuadraticSplineRender' %}">Cubic Spline</a>
-            <a class="dropdown-item" href="{% url 'LinearSplineRender' %}">Linear Spline</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Linear methods</a>
           <div class="dropdown-menu" aria-labelledby="dropdown01">
             <a class="dropdown-item" href="{% url 'CroutRender' %}">Crout</a>
@@ -88,15 +79,12 @@
               <a class="dropdown-item" href="{% url 'newtoninterp' %}">Newton</a>
               <a class="dropdown-item" href="{% url 'vandermonde' %}">Vandermonde</a>
               <a class="dropdown-item" href="{% url 'lagrange' %}">Lagrange</a>
-              <a class="dropdown-item" href="{% url 'LUParcialRender' %}">Linear Spline</a>
-              <a class="dropdown-item" href="{% url 'LUParcialRender' %}">Quadratic Spline</a>
-              <a class="dropdown-item" href="{% url 'LUParcialRender' %}">Cubic Spline</a>
+              <a class="dropdown-item" href="{% url 'CubicSplineRender' %}">Quadratic Spline</a>
+              <a class="dropdown-item" href="{% url 'QuadraticSplineRender' %}">Cubic Spline</a>
+              <a class="dropdown-item" href="{% url 'LinearSplineRender' %}">Linear Spline</a>
           </div>
       </li>
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Don't Use</button>
-      </form>
     </div>
   </nav>
 </header>
