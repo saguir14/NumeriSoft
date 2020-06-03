@@ -37,7 +37,7 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-            <a class="navbar-brand" href="#">Carousel</a>
+            <a class="navbar-brand" href="#">NumeriSoft</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
     </button>
@@ -46,64 +46,90 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"> Link </a>
+                    <!--<li class="nav-item">
+                        <a class="nav-link" href="{% url 'IncrementalSearch' %}"> Incremental Search </a>
+                    </li>-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+                        Equation's Solution
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown02">
+                            <a class="dropdown-item" href="{% url 'IncrementalSearch' %}">Incremental Search</a>
+                            <a class="dropdown-item" href="{% url 'Biseccion' %}">Bisection</a>
+                            <a class="dropdown-item" href="{% url 'FalsePosition' %}">False Position</a>
+                            <a class="dropdown-item" href="{% url 'FixedPoint' %}">Fixed Point</a>
+                            <a class="dropdown-item" href="{% url 'newton' %}">Newton</a>
+                            <a class="dropdown-item" href="{% url 'secant' %}">Secant</a>
+                            <a class="dropdown-item" href="{% url 'MultipleRoots' %}">Multiple Roots</a>
+                        </div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Otro</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Linear Methods</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown01">
+                            <a class="dropdown-item" href="{% url 'CroutRender' %}">Crout</a>
+                            <a class="dropdown-item" href="{% url 'CholeskyRender' %}">Cholesky</a>
+                            <a class="dropdown-item" href="{% url 'DoolittleRender' %}">Doolittle</a>
+                            <a class="dropdown-item" href="{% url 'LUParcialRender' %}">LUParcial</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Interpolation Methods</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown03">
+                            <a class="dropdown-item" href="{% url 'CroutRender' %}">Newton</a>
+                            <a class="dropdown-item" href="{% url 'CholeskyRender' %}">Vandermonde</a>
+                            <a class="dropdown-item" href="{% url 'DoolittleRender' %}">Lagrange</a>
+                            <a class="dropdown-item" href="{% url 'LUParcialRender' %}">Linear Spline</a>
+                            <a class="dropdown-item" href="{% url 'LUParcialRender' %}">Quadratic Spline</a>
+                            <a class="dropdown-item" href="{% url 'LUParcialRender' %}">Cubic Spline</a>
+                        </div>
                     </li>
                 </ul>
-                <form class="form-inline mt-2 mt-md-0">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
             </div>
         </nav>
     </header>
 
-    <form method="POST" action="/incrementalsearch/">
-        {{ form.as_ul }} {% csrf_token %}
-        <button type="submit">Submit</button>
-    </form>
-    <!--   <form action="Incremental" method="POST">
+
+    <form action="{% url 'IncrementalSearchRes' %}" method="POST">
         {% csrf_token %}
         <label> x0: </label>
-        <input name="x0">
+        <input name="x0" , type="number">
         <br>
         <label> Delta: </label>
-        <input name="delt">
+        <input name="delt" type="number" min="0" step="0.01">
         </br>
         <label> Iterations: </label>
-        <input name="iter">
+        <input name="iter" , type="number">
         <br>
         <label> Function: </label>
-        <input name="func">
+        <input name="func" , type="text">
         <br>
-        <button type="submit">Submit</button>
-    </form>
--->
-    <!-- START THE FEATURETTES -->
+        <button type="submit">Submit</button><br>
+        <!--<p>Results:</p>
+                <!--<ul>
+                {% for i in vec%}
+                <ul>{{ i }}</ul>
+                {% endfor %}-->
 
-    <hr class="featurette-divider">
+        <!-- /END THE FEATURETTES -->
 
-    <!-- /END THE FEATURETTES -->
-
-    </div>
-    <!-- /.container -->
+        </div>
+        <!-- /.container -->
 
 
-    <!-- FOOTER -->
-    <footer class="container">
-        <p class="float-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2017-2020 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-    </footer>
-    </main>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script>
-        window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')
-    </script>
-    {% load static %}
-    <script src="{% static 'assets/dist/js/bootstrap.bundle.js' %}"></script>
+        <!-- FOOTER -->
+        <footer class="container">
+            <p class="float-right"><a href="#">Back to top</a></p>
+            <p>&copy; 2017-2020 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        </footer>
+        </main>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script>
+            window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')
+        </script>
+        {% load static %}
+        <script src="{% static 'assets/dist/js/bootstrap.bundle.js' %}"></script>
 </body>
 
 </html>

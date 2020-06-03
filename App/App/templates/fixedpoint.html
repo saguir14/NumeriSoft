@@ -46,11 +46,29 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"> Link </a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+                        Equation's Solution
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown02">
+                            <a class="dropdown-item" href="{% url 'IncrementalSearch' %}">Incremental Search</a>
+                            <a class="dropdown-item" href="{% url 'Biseccion' %}">Bisection</a>
+                            <a class="dropdown-item" href="{% url 'FalsePosition' %}">False Position</a>
+                            <a class="dropdown-item" href="{% url 'FixedPoint' %}">Fixed Point</a>
+                            <a class="dropdown-item" href="{% url 'newton' %}">Newton</a>
+                            <a class="dropdown-item" href="{% url 'secant' %}">Secant</a>
+                            <a class="dropdown-item" href="{% url 'MultipleRoots' %}">Multiple Roots</a>
+                        </div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Otro</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Linear methods</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown01">
+                            <a class="dropdown-item" href="{% url 'CroutRender' %}">Crout</a>
+                            <a class="dropdown-item" href="{% url 'CholeskyRender' %}">Cholesky</a>
+                            <a class="dropdown-item" href="{% url 'DoolittleRender' %}">Doolittle</a>
+                            <a class="dropdown-item" href="{% url 'LUParcialRender' %}">LUParcial</a>
+                        </div>
                     </li>
                 </ul>
                 <form class="form-inline mt-2 mt-md-0">
@@ -61,13 +79,13 @@
         </nav>
     </header>
 
-    <form action="Incremental" method="POST">
+    <form action="{% url 'fixedpointres' %}" method="POST">
         {% csrf_token %}
-        <label> xa: </label>
-        <input name="xa">
+        <label> x0: </label>
+        <input name="x0">
         <br>
         <label> Tolerance: </label>
-        <input name="iter">
+        <input name="tol">
         <br>
         <label> Iterations: </label>
         <input name="iter">
@@ -76,7 +94,7 @@
         <input name="func">
         <br>
         <label> g(x): </label>
-        <input name="func">
+        <input name="fung">
         <br>
         <button type="submit">Submit</button>
     </form>

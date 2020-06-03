@@ -82,13 +82,10 @@
         </nav>
     </header>
 
-    <form action="{% url 'falsepositionres' %}" method="POST">
+    <form action="{% url 'multiplerootsres' %}" method="POST">
         {% csrf_token %}
-        <label> xi: </label>
-        <input name="xi">
-        <br>
-        <label> xs: </label>
-        <input name="xs">
+        <label> x0: </label>
+        <input name="x0">
         <br>
         <label> Tolerance: </label>
         <input name="tol">
@@ -99,7 +96,18 @@
         <label> f(x): </label>
         <input name="func">
         <br>
+        <label> d'f(x): </label>
+        <input name="df">
+        <br>
+        <label> d''f(x): </label>
+        <input name="d2f">
+        <br>
         <button type="submit">Submit</button>
+        <p>Results:</p>
+        <!--<ul>-->
+        {% for i in vec%}
+        <ul>{{ i }}</ul>
+        {% endfor %}
     </form>
 
     <!-- START THE FEATURETTES -->
