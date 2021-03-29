@@ -77,7 +77,7 @@ py-expression-eval==0.3.9
 pycodestyle==2.6.0
 pycrypto==2.6.1
 pycups==1.9.73
-Pygments==2.6.1
+Pygments==2.7.4
 pygobject==3.24.1
 pylint==2.5.2
 pyparsing==2.4.7
